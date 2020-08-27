@@ -295,7 +295,7 @@
         if (!id.length) {
           id = cleanUp(heading.text());
         }
-
+        id = cleanUp(window.btoa(encodeURIComponent(id)).toLowerCase());
         heading
           .attr({
             id: id,
